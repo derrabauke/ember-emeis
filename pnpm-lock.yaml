@@ -74,9 +74,6 @@ importers:
       ember-uikit:
         specifier: ^9.1.4
         version: 9.2.1(@glint/template@1.7.2)(ember-source@6.4.0(@glimmer/component@2.0.0)(rsvp@4.8.5))(webpack@5.99.7)
-      eslint-plugin-prettier:
-        specifier: ^5.5.4
-        version: 5.5.4(@types/eslint@9.6.1)(eslint-config-prettier@9.1.0(eslint@9.25.1))(eslint@9.25.1)(prettier@3.5.3)
       file-saver:
         specifier: ^2.0.5
         version: 2.0.5
@@ -222,6 +219,9 @@ importers:
       eslint-plugin-n:
         specifier: 17.17.0
         version: 17.17.0(eslint@9.25.1)
+      eslint-plugin-prettier:
+        specifier: 5.5.4
+        version: 5.5.4(@types/eslint@9.6.1)(eslint-config-prettier@9.1.0(eslint@9.25.1))(eslint@9.25.1)(prettier@3.5.3)
       eslint-plugin-qunit:
         specifier: 8.1.2
         version: 8.1.2(eslint@9.25.1)
@@ -267,6 +267,9 @@ importers:
       stylelint-config-standard:
         specifier: 36.0.1
         version: 36.0.1(stylelint@16.19.1(typescript@5.9.3))
+      stylelint-prettier:
+        specifier: 5.0.3
+        version: 5.0.3(prettier@3.5.3)(stylelint@16.19.1(typescript@5.9.3))
       webpack:
         specifier: 5.99.7
         version: 5.99.7
@@ -7414,6 +7417,13 @@ packages:
     engines: {node: '>=18.12.0'}
     peerDependencies:
       stylelint: ^16.1.0
+
+  stylelint-prettier@5.0.3:
+    resolution: {integrity: sha512-B6V0oa35ekRrKZlf+6+jA+i50C4GXJ7X1PPmoCqSUoXN6BrNF6NhqqhanvkLjqw2qgvrS0wjdpeC+Tn06KN3jw==}
+    engines: {node: '>=18.12.0'}
+    peerDependencies:
+      prettier: '>=3.0.0'
+      stylelint: '>=16.0.0'
 
   stylelint@16.19.1:
     resolution: {integrity: sha512-C1SlPZNMKl+d/C867ZdCRthrS+6KuZ3AoGW113RZCOL0M8xOGpgx7G70wq7lFvqvm4dcfdGFVLB/mNaLFChRKw==}
@@ -17266,6 +17276,12 @@ snapshots:
     dependencies:
       stylelint: 16.19.1(typescript@5.9.3)
       stylelint-config-recommended: 14.0.1(stylelint@16.19.1(typescript@5.9.3))
+
+  stylelint-prettier@5.0.3(prettier@3.5.3)(stylelint@16.19.1(typescript@5.9.3)):
+    dependencies:
+      prettier: 3.5.3
+      prettier-linter-helpers: 1.0.0
+      stylelint: 16.19.1(typescript@5.9.3)
 
   stylelint@16.19.1(typescript@5.9.3):
     dependencies:
